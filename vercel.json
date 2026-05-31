@@ -2,16 +2,7 @@
   "version": 2,
   "functions": {
     "server.js": {
-      "includeFiles": [
-        "*.html",
-        "*.css",
-        "*.js",
-        "admin/**",
-        "docs/**",
-        "fonts/**",
-        "images/**",
-        "server/**"
-      ]
+      "includeFiles": "{*.html,*.css,*.js,docs/**,fonts/**,images/**,server/**}"
     }
   },
   "builds": [
