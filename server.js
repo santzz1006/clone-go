@@ -39,6 +39,25 @@ app.use((request, response, next) => {
 });
 app.use(express.static(__dirname));
 
+const pages = new Map([
+  ["/", "index.html"],
+  ["/index", "index.html"],
+  ["/cart", "cart.html"],
+  ["/checkout", "checkout.html"],
+  ["/dashboard", "dashboard.html"],
+  ["/login", "login.html"],
+  ["/marketplace", "marketplace.html"],
+  ["/order", "order.html"],
+  ["/product", "product.html"],
+  ["/register", "register.html"],
+]);
+
+pages.forEach((fileName, route) => {
+  app.get(route, (_request, response) => {
+    response.sendFile(path.join(__dirname, fileName));
+  });
+});
+
 function onlyDigits(value = "") {
   return String(value).replace(/\D/g, "");
 }
@@ -241,6 +260,10 @@ app.post("/api/syncpay/webhook", async (request, response) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`CloneGo rodando em http://localhost:${port}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`CloneGo rodando em http://localhost:${port}`);
+  });
+}
+
+export default app;
