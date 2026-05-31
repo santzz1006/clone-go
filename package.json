@@ -4,13 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "check": "node --check server.js && node --check api/index.js && node --check server/catalog.js && node --check server/syncpay.js && node --check server/supabase.js"
+    "check": "node --check api/_utils.js && node --check api/health.js && node --check api/auth/login.js && node --check api/auth/me.js && node --check api/auth/register.js && node --check api/checkout/pix.js && node --check api/payments/[identifier].js && node --check api/syncpay/webhook.js && node --check server/auth.js && node --check server/catalog.js && node --check server/syncpay.js && node --check server/supabase.js"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
     "qrcode": "^1.5.4"
   }
 }

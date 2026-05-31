@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "{*.html,*.css,*.js,docs/**,fonts/**,images/**,server/**}"
-    }
-  },
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
+      "source": "/health",
+      "destination": "/api/health"
     }
   ]
 }
