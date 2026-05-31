@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho | Clonador de Paginas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="cart">
+    <div id="siteHeader"></div>
+    <main class="page-main">
+      <section class="section">
+        <div class="container page-title">
+          <h1>Revise os itens antes do checkout.</h1>
+        </div>
+        <div class="container checkout-layout">
+          <section class="panel">
+            <h2>Itens selecionados</h2>
+            <div id="cartItems" class="cart-list"></div>
+          </section>
+          <aside class="panel summary-card">
+            <h2>Resumo</h2>
+            <div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">R$ 0</strong></div>
+            <div class="summary-row"><span>Taxas</span><strong>R$ 0</strong></div>
+            <div class="summary-row total"><span>Total</span><strong id="cartTotal">R$ 0</strong></div>
+            <a class="btn btn-primary full" href="checkout.html">Continuar para checkout</a>
+            <button class="btn btn-secondary full" id="clearCart" type="button">Limpar carrinho</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <div id="toast"></div>
+  </body>
+</html>

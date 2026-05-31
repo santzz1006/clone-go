@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Clonador de Paginas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="register">
+    <main class="auth-shell">
+      <div class="auth-card reveal">
+        <a class="brand compact logo-brand" href="index.html" aria-label="Clonador de Paginas"><img src="images/logo.clone.png" alt="Clonador de Paginas" /></a>
+        <h1>Crie seu acesso</h1>
+        <p>Crie sua conta para finalizar compras, acompanhar pedidos e receber arquivos.</p>
+        <form class="auth-form" id="registerForm">
+          <label>Nome<input name="name" type="text" placeholder="Seu nome" required /></label>
+          <label>E-mail<input name="email" type="email" placeholder="voce@empresa.com" required /></label>
+          <label>Senha<input id="registerPassword" name="password" type="password" placeholder="Crie uma senha" required /></label>
+          <button class="btn btn-primary full" type="submit">Criar conta</button>
+        </form>
+        <p class="auth-switch">Ja tem conta? <a href="login.html">Entrar</a></p>
+      </div>
+    </main>
+    <div id="toast"></div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mochila | Clonador de Paginas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="dashboard">
+    <div id="siteHeader"></div>
+    <main class="page-main">
+      <section class="section">
+        <div class="container page-title">
+          <h1>Mochila do cliente.</h1>
+          <p>Acompanhe seus pedidos, veja o andamento da producao e acesse os arquivos quando a entrega for finalizada.</p>
+        </div>
+        <div class="container backpack-shell">
+          <aside class="backpack-sidebar panel">
+            <div class="backpack-sidebar-head">
+              <span class="backpack-icon" data-icon="backpack"></span>
+              <div>
+                <h2>Minha Mochila</h2>
+                <p>Central de pedidos</p>
+              </div>
+            </div>
+            <button class="active" data-backpack-tab="overview" type="button">Visao geral</button>
+            <button data-backpack-tab="orders" type="button">Pedidos</button>
+            <button data-backpack-tab="files" type="button">Arquivos</button>
+            <button data-backpack-tab="history" type="button">Historico</button>
+          </aside>
+
+          <section class="backpack-content">
+            <div class="backpack-tab active" data-backpack-panel="overview">
+              <div id="dashboardStats" class="dashboard-grid"></div>
+              <section class="panel production-panel">
+                <div>
+                  <h2>Status principal</h2>
+                  <p id="activeOrderMessage">Nenhum pedido ativo no momento.</p>
+                </div>
+                <div id="activeOrderPanel"></div>
+              </section>
+            </div>
+
+            <div class="backpack-tab" data-backpack-panel="orders">
+              <section class="panel">
+                <h2>Meus pedidos</h2>
+                <div id="ordersList" class="order-list"></div>
+              </section>
+            </div>
+
+            <div class="backpack-tab" data-backpack-panel="files">
+              <section class="panel">
+                <h2>Arquivos da Mochila</h2>
+                <div id="backpackList" class="delivery-list"></div>
+              </section>
+            </div>
+
+            <div class="backpack-tab" data-backpack-panel="history">
+              <section class="panel">
+                <h2>Historico do pedido</h2>
+                <p class="panel-subtitle">Acompanhe desde a geracao do pedido ate a entrega final.</p>
+                <div id="historyList" class="history-list"></div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <div id="toast"></div>
+  </body>
+</html>

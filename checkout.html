@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Clonador de Paginas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="checkout">
+    <div id="siteHeader"></div>
+    <main class="page-main">
+      <section class="section checkout-page">
+        <div class="container page-title checkout-title">
+          <span class="page-kicker">Checkout</span>
+          <h1>Finalize seu pedido.</h1>
+          <p>Confirme seus dados, envie o briefing e deixe o clone pronto para entrar na fila de producao.</p>
+          <div class="checkout-badges" aria-label="Resumo da entrega">
+            <span><strong>3h</strong> prazo base</span>
+            <span><strong>ZIP</strong> entrega final</span>
+            <span><strong>Briefing</strong> salvo no pedido</span>
+          </div>
+        </div>
+
+        <div class="container checkout-layout checkout-page-layout">
+          <form class="panel form-panel checkout-form" id="checkoutForm">
+            <div class="checkout-form-head">
+              <span>01</span>
+              <div>
+                <h2>Dados do comprador</h2>
+                <p>Usaremos esses dados para identificar o pedido e liberar a entrega.</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label>Nome completo<input name="name" type="text" placeholder="Seu nome" required /></label>
+              <label>E-mail<input name="email" type="email" placeholder="voce@empresa.com" required /></label>
+              <label>WhatsApp<input name="phone" type="tel" placeholder="(00) 00000-0000" /></label>
+              <label>CPF<input name="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required /></label>
+            </div>
+
+            <div class="checkout-form-head">
+              <span>02</span>
+              <div>
+                <h2>Briefing do clone</h2>
+                <p>Quanto mais direto o briefing, mais fiel fica a primeira versao.</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label class="full-field">Link de referencia<input name="reference" type="url" placeholder="https://site-referencia.com" /></label>
+              <label>Nicho<input name="niche" type="text" placeholder="Ex: encapsulado, infoproduto, leadgen" /></label>
+              <label>Cores desejadas<input name="colors" type="text" placeholder="#FF6600, preto, branco" /></label>
+              <label class="full-field">Notas de gateway<textarea name="gateway" rows="5" placeholder="Checkout, pixel, botao, redirecionamento..."></textarea></label>
+            </div>
+
+            <button class="btn btn-primary full checkout-submit" id="simulatePayment" type="submit">
+              <span data-icon="credit"></span>
+              Gerar Pix
+            </button>
+          </form>
+
+          <aside class="panel summary-card checkout-summary">
+            <div class="summary-head">
+              <span class="summary-icon" data-icon="cart"></span>
+              <div>
+                <h2>Resumo do pedido</h2>
+                <p>Confira os itens antes de confirmar.</p>
+              </div>
+            </div>
+            <div id="checkoutItems" class="compact-list"></div>
+            <div class="summary-total">
+              <span>Total</span>
+              <strong id="checkoutTotal">R$ 0</strong>
+            </div>
+            <div class="status-box" id="paymentStatus">
+              <strong>Aguardando Pix</strong>
+              <span>O pedido sera salvo no banco e liberado apos a confirmacao do pagamento Pix.</span>
+            </div>
+            <div id="pixPaymentBox"></div>
+            <a class="btn btn-secondary full" href="cart.html">Voltar ao carrinho</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <div id="toast"></div>
+  </body>
+</html>

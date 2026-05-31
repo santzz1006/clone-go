@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Clonador de Paginas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="login">
+    <main class="auth-shell">
+      <div class="auth-card reveal">
+        <a class="brand compact logo-brand" href="index.html" aria-label="Clonador de Paginas"><img src="images/logo.clone.png" alt="Clonador de Paginas" /></a>
+        <h1>Acesse sua conta</h1>
+        <p>Entre para finalizar compras, acompanhar pedidos e acessar sua Mochila.</p>
+        <form class="auth-form" id="loginForm">
+          <label>E-mail<input name="email" type="email" placeholder="voce@empresa.com" required /></label>
+          <label>Senha<input id="loginPassword" name="password" type="password" placeholder="Digite sua senha" required /></label>
+          <div class="form-row">
+            <label class="remember"><input type="checkbox" /> Manter conectado</label>
+            <button class="text-button" type="button" data-toggle-password="loginPassword">Mostrar senha</button>
+          </div>
+          <button class="btn btn-primary full" type="submit">Entrar</button>
+        </form>
+        <p class="auth-switch">Nao tem conta? <a href="register.html">Criar cadastro</a></p>
+      </div>
+    </main>
+    <div id="toast"></div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace | Clonador de Paginas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="marketplace">
+    <div id="siteHeader"></div>
+    <main class="page-main">
+      <section class="section">
+        <div class="container page-title">
+          <h1>Planos e mini-servicos para montar sua operacao.</h1>
+          <p>Escolha produtos, veja detalhes e envie tudo para o carrinho de desenvolvimento.</p>
+        </div>
+
+        <div class="container marketplace-layout">
+          <section class="filter-panel" aria-label="Filtros do marketplace">
+            <div class="filter-heading">
+              <div>
+                <h2>Filtros</h2>
+                <p>Encontre planos e servicos por tipo ou nome.</p>
+              </div>
+              <strong id="filterCount">0 itens</strong>
+            </div>
+            <label class="search-field" for="marketSearch">
+              <span>Buscar</span>
+              <input id="marketSearch" type="search" placeholder="Ex: premium, pixel, mobile" />
+            </label>
+            <div class="filter-tabs" role="tablist" aria-label="Categorias">
+              <button class="active" data-filter-value="all" type="button"><span data-icon="store"></span>Todos</button>
+              <button data-filter-value="plan" type="button"><span data-icon="layout"></span>Planos</button>
+              <button data-filter-value="service" type="button"><span data-icon="gauge"></span>Mini-servicos</button>
+              <button data-filter-value="premium" type="button"><span data-icon="zap"></span>Premium</button>
+            </div>
+          </section>
+          <section class="product-grid" id="productGrid" aria-label="Produtos"></section>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <div id="toast"></div>
+  </body>
+</html>

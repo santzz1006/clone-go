@@ -1,0 +1,16 @@
+{
+  "name": "clonego-pix-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check server/catalog.js && node --check server/syncpay.js && node --check server/supabase.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4"
+  }
+}
