@@ -1,5 +1,19 @@
 {
   "version": 2,
+  "functions": {
+    "server.js": {
+      "includeFiles": [
+        "*.html",
+        "*.css",
+        "*.js",
+        "admin/**",
+        "docs/**",
+        "fonts/**",
+        "images/**",
+        "server/**"
+      ]
+    }
+  },
   "builds": [
     {
       "src": "server.js",
@@ -9,7 +23,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/server.js"
     }
   ]
 }
